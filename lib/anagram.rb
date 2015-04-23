@@ -6,8 +6,15 @@ class String
     array_words.each() do |element|
       sorted_element = element.split("").sort()
       if key == sorted_element
+        if output.!=""
+        output = output.concat(" ")
+        end
         output = output.concat(element)
       end
     end
+    if output == ""
+      output = "no matching anagrams"
+    end
+    output
   end
 end
